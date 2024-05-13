@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
 import GameCard from "../components/GameCard";
-import "./GamesGrid.css"; // Ajuste do caminho de importação
+import "./GamesGrid.css"; //
 
 const Home = () => {
   const [games, setGames] = useState([]);
   const anoLancamento = "2023"; // Defina o ano de lançamento desejado
 
-  useEffect(() => {
-    const getGames = async () => {
-      try {
+  useEffect(() => { // Hook useEffect para buscar os jogos
+    const getGames = async () => { // Função assíncrona para buscar os jogos
+      try { 
         const response = await fetch(`https://catalogoapi-0ycs.onrender.com/ano/${anoLancamento}`);
-        const data = await response.json();
-        setGames(data);
-      } catch (error) {
-        console.error("Error fetching games:", error);
+        const data = await response.json(); // Converte a resposta para JSON
+        setGames(data); // Atualiza o estado com os jogos obtidos
+      } catch (error) { // Se ocorrer um erro
+        console.error("Error fetching games:", error); 
       }
     };
 
     getGames();
-  }, [anoLancamento]); // Atualize os jogos sempre que o ano de lançamento mudar
+  }, [anoLancamento]); // Atualize os jogos de acordo com o ano caso ele mude
 
   return (
     <div className="container">
