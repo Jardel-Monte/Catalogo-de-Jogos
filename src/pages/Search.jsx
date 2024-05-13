@@ -13,34 +13,25 @@ const Search = () => {
 
   const [searchResults, setSearchResults] = useState([]);
 
-  const searchGames = async () => {
+  const searchGames = async () => { // Função assíncrona responsavel por buscar os jogos com base na consulta de pesquisa
     try {
       const response = await fetch(`https://catalogoapi-0ycs.onrender.com/titulo/${query}`);
       const data = await response.json();
-      setSearchResults(data);
+      setSearchResults(data); atualiza os resultados da pesquisa com isso aq
     } catch (error) {
       console.error("Error searching for games:", error);
       setSearchResults([]);
     }
   };
 
+  // Efeito para executar a busca sempre que a consulta de pesquisa mudar
   useEffect(() => {
     if (query) {
       searchGames();
     } else {
       setSearchResults([]);
     }
-  }, [query]);
-
-/*   return (
-    <div className="container">
-      <h2 className="title">Resultados para: <span className="query-text">{query}</span></h2>
-      <div className="games-container">
-        {searchResults.length > 0 &&
-          searchResults.map((game) => <GameCard key={game._id} game={game} />)}
-      </div>
-    </div> 
-  ); */
+  }, [query]); // atualiza os resultados de novo
 };
 
 export default Search;
