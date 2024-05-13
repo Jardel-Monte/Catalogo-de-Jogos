@@ -9,7 +9,7 @@ const GameCard = ({ game }) => {
         alt={game.title}
       />
       <h2 className="game-title">{game.title}</h2>
-      <a href={`/game/${game._id}`} >
+      <a href={`/Game/${game._id}`} >
         Ver Detalhes
       </a>
     </div>
