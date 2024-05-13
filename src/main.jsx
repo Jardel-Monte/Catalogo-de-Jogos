@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/" element={<Home />} />
           <Route path="game/:id" element={<Game />} />
           <Route path="search" element={<Search />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="index.html" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
