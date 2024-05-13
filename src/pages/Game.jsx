@@ -9,30 +9,26 @@ const Game = () => {
   const [game, setGame] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  
-  // ESTA FUNCIONANDO ,TIME QUE SE GANHA NAO SE MEXE!
-  useEffect(() => {
-    const getGame = async () => {
+  useEffect(() => { 
+    const getGame = async () => { // Função para buscar o jogo
       try {
-        const response = await fetch(`https://catalogoapi-0ycs.onrender.com/${id}`);
-        const data = await response.json();
-        console.log("Dados do jogo:", data);
+        const response = await fetch(`https://catalogoapi-0ycs.onrender.com/${id}`); // Requisição para a API
+        const data = await response.json(); 
 
-        if (data.length === 0) {
-          console.log("Dados do jogo vazios.");
-          setLoading(false);
+        if (data.length === 0) { // Verifica se os dados do jogo estão vazios
+          setLoading(false); 
         } else {
-          setGame(data[0]); // Acessa o primeiro elemento do array
-          setLoading(false);
+          setGame(data[0]); // Atualiza o estado do jogo
+          setLoading(false); 
         }
       } catch (error) {
-        console.error("Erro ao obter dados do jogo:", error);
-        setLoading(false);
+        console.error("Erro ao obter dados do jogo:", error); // Exibe erro no console
+        setLoading(false); 
       }
     };
 
     getGame();
-  }, [id]);
+  }, [id]); caso id do jogo mude, a função sera ativads
 
   console.log("Estado atual de game:", game);
 
