@@ -1,20 +1,21 @@
 import React from "react";
-import "./GameCard.css"; // Importe o arquivo CSS para estilização específica do GameCard
-
+import { Link } from "react-router-dom"; // Importe o Link do react-router-dom
+import "./GameCard.css";
+ 
 const GameCard = ({ game }) => {
   return (
-    <div className="game-card">
-      <img
+<div className="game-card">
+<img
         src={game.image_url}
         alt={game.title}
       />
-      <h2 className="game-title">{game.title}</h2>
-      <a href={`/Game/${game._id}`} >
+<h2 className="game-title">{game.title}</h2>
+<Link to={`/Game/${game._id}`} >
         Ver Detalhes
-      </a>
-    </div>
+</Link>
+</div>
   );
 };
-
+ 
 export default GameCard;
 
