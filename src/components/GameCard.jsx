@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Importe o Link do react-router-dom
+import { Link } from "react-router-dom"; 
 import "./GameCard.css";
- 
+
+// esse componente um cartão do jogo exbindo a sua imagem e o seu titulo, além de possuir tbm um link de ver detalhes referente a informações adicionais sobre o jogo
 const GameCard = ({ game }) => {
   return (
 <div className="game-card">
