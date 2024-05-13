@@ -17,7 +17,7 @@ const Search = () => {
     try {
       const response = await fetch(`https://catalogoapi-0ycs.onrender.com/titulo/${query}`);
       const data = await response.json();
-      setSearchResults(data); atualiza os resultados da pesquisa com isso aq
+      setSearchResults(data); // atualiza os resultados da pesquisa com isso aq
     } catch (error) {
       console.error("Error searching for games:", error);
       setSearchResults([]);
