@@ -1,0 +1,8 @@
+.app-container {
+  justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background: rgb(109,12,184);
+    background: linear-gradient(90deg, rgba(109,12,184,1) 27%, rgba(141,0,247,1) 45%, rgba(70,59,245,1) 59%, rgba(0,16,182,1) 73%);
+}
+

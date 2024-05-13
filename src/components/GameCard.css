@@ -1,0 +1,73 @@
+.game-card {
+  width: 340px;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 2px white;
+  transition: border-color 0.5s ease-in-out;
+}
+
+.game-card img {
+  width: 285px;
+  height: 300px;
+  border-radius: 10px;
+  align-items: center;
+  border: 2px solid white;
+}
+
+
+.game-card img,
+.game-card p {
+  margin-bottom: 1rem;
+}
+
+.game-card h2 {
+  width: 90%;
+  margin-bottom: 1.5rem;
+  font-size: 28px;
+  font-family: "Kavoon";
+}
+
+.game-card a {
+  background-color:  cornflowerblue;
+  border: 2px solid rgb(0, 0, 94);
+  border-radius: 4px;
+  color: #000;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.game-card a:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.game-card:hover{
+  border: solid 3px white;
+  animation: blink 1s infinite;
+}
+
+/* animacao pisca-pisca */
+@keyframes blink {
+  0% {
+      border-color: transparent;
+ 
+  }
+  50% {
+      border-color: white;
+
+  }
+  100% {
+      border-color: transparent;
+  }
+}
+  
