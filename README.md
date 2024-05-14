@@ -2,6 +2,7 @@
 Este é um projeto de catálogo de jogos desenvolvido com React.js e Node.js. O objetivo deste projeto é fornecer aos usuários uma plataforma onde eles possam visualizar uma lista de jogos, pesquisar por jogos específicos e ver detalhes sobre cada jogo, incluindo imagens, descrições, ano de lançamento e plataformas disponíveis.
 - ----
 - ----
+<h3>Funcionalidades disponiveis no projeto</h3>
 - Visualização de uma lista de jogos>
 - Pesquisa por jogos específicos
 - Visualização de detalhes sobre cada jogo
