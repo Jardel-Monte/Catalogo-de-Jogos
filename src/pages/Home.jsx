@@ -4,16 +4,16 @@ import "./GamesGrid.css";
 
 const Home = () => {
   const [games, setGames] = useState([]);
-  const [loading, setLoading] = useState(true); // Estado para controlar o carregamento
+  const [loading, setLoading] = useState(true); 
   const anoLancamento = "2023"; 
 
   useEffect(() => { 
-    const getGames = async () => { // Função assíncrona para buscar os jogos
+    const getGames = async () => { 
       try { 
         const response = await fetch(`https://catalogoapi-0ycs.onrender.com/ano/${anoLancamento}`);
         const data = await response.json(); 
-        setGames(data); // Atualiza o estado com os jogos obtidos
-        setLoading(false); // Define o estado de carregamento como falso quando os jogos são carregados
+        setGames(data);
+        setLoading(false); 
       } catch (error) { 
         console.error("Error fetching games:", error); 
         setLoading(false);
@@ -21,7 +21,7 @@ const Home = () => {
     };
 
     getGames();
-  }, [anoLancamento]); // Atualize os jogos de acordo com o ano caso ele mude
+  }, [anoLancamento]);
 
   // Verifica se está carregando e exibe a mensagem de carregamento
   if (loading) {
